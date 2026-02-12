@@ -278,6 +278,10 @@ h4 {
     color: var(--color-cream);
     padding: var(--spacing-lg) var(--spacing-md);
     margin-top: var(--spacing-xl);
+    position: relative;
+    /* Ensure z-index works */
+    z-index: 50;
+    /* Ensure it is above other elements */
 }
 
 .footer-content {
@@ -298,6 +302,9 @@ h4 {
     text-decoration: none;
     font-size: 0.9rem;
     transition: color var(--transition-fast);
+    position: relative;
+    z-index: 100;
+    /* Ensure clickable */
 }
 
 .footer-links a:hover {
@@ -757,4 +764,116 @@ h4 {
 .rainbow-btn:hover {
     transform: scale(1.05);
     color: #ffffff;
+}
+
+/* Contact Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 24, 18, 0.85);
+    /* Dark Forest overlay */
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    /* High z-index */
+    display: flex;
+    /* Flex to center */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* CRITICAL: Prevent blocking clicks when hidden */
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    /* Re-enable clicks when active */
+}
+
+.modal-content {
+    background-color: var(--color-cream);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-stone);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--color-forest);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--color-clay);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Modal Form Styles */
+.modal-form .form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.modal-form label {
+    display: block;
+    font-family: var(--font-heading);
+    color: var(--color-forest);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    background-color: #f9fafb;
+    /* Light bg for input */
+    transition: border-color 0.3s ease;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+    outline: none;
+    border-color: var(--color-clay);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(192, 122, 92, 0.1);
+}
+
+.modal-form textarea {
+    resize: vertical;
 }

@@ -1,0 +1,83 @@
+
+/* Contact Page Specific Styles */
+
+/* Ensure the contact section has enough spacing */
+.contact-section {
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-xl);
+}
+
+.contact-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-white); /* Fallback if var not defined */
+    background-color: #ffffff;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-stone);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-family: var(--font-heading);
+    color: var(--color-forest);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0s; /* Fix transition var if needed */
+    background-color: #f9fafb;
+    color: var(--color-forest);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-clay);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(192, 122, 92, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .form-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--color-forest);
+    color: var(--color-cream); /* cream color text */
+    border: none;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--color-clay);
+}
