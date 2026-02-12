@@ -1,0 +1,287 @@
+/* Anti-Gravity Style - Minimalist & Editorial */
+
+:root {
+    --color-bg: #FFFFFF;
+    --color-text: #1A1A1A;
+    /* Almost Black/Charcoal */
+    --color-accent: #374151;
+    /* Muted Charcoal/Teal tone */
+    --color-subtle: #9CA3AF;
+    /* Light Gray for borders */
+
+    /* Typography */
+    --font-display: 'Inter', sans-serif;
+    /* Clean, modern, architectural */
+    --font-serif: 'Playfair Display', serif;
+    /* For editorial touches */
+
+    --spacing-layout: 8vw;
+    /* Generous fluid spacing */
+    --transition-smooth: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-display);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #4B5563;
+    max-width: 60ch;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-layout);
+}
+
+.spacer {
+    height: 15vh;
+}
+
+/* Navigation - Floating & Minimal */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem var(--spacing-layout);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference;
+    color: white;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+.version-toggle {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.version-toggle:hover {
+    border-color: currentColor;
+}
+
+/* Hero Section - Anti-Gravity floating effect */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Left aligned */
+    padding-left: var(--spacing-layout);
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(1.1) contrast(0.95) grayscale(0.2);
+    /* Lighter, more editorial look */
+}
+
+/* White overlay gradient for text readability without darkening everything */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-eyebrow {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+/* Floating Portal Button */
+.btn-portal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Very subtle border */
+    background: transparent;
+    border-radius: 50px;
+    /* Pill shape */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-portal:hover {
+    transform: translateY(-3px);
+    /* The "Lift" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+    color: white;
+}
+
+.btn-portal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-portal:hover::before {
+    transform: scaleX(1);
+}
+
+/* Content Sections - Asymmetric & Architectural */
+.section {
+    padding: 10vh 0;
+}
+
+.grid-editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-layout);
+    align-items: center;
+}
+
+.text-block h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.text-block h2::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background: var(--color-text);
+}
+
+.detail-list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.detail-list li {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-list li span:last-child {
+    color: var(--color-subtle);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --spacing-layout: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .grid-editorial {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        align-items: center;
+        text-align: center;
+        padding-left: var(--spacing-layout);
+        padding-right: var(--spacing-layout);
+    }
+
+    .hero::after {
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    .hero-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

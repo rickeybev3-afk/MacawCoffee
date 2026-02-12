@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macaw Coffee Co. | Artisan & Grounded</title>
+    <meta name="description"
+        content="Experience the art of slow coffee with Macaw Coffee Co. Deeply grounded, intentional, and rustic-modern blends.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">MACAW</div>
+        <ul class="nav-links">
+
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#blends">The Blends</a></li>
+            <li><a href="https://www.toasttab.com/invoice/lead?rx=9687182d-2e37-48f8-8100-145cff697b74&ot=41d47cf5-7f4a-4df1-b550-9ffe7855e517"
+                    target="_blank">Catering</a></li>
+            <li><a href="https://www.toasttab.com/invoice/lead?rx=9687182d-2e37-48f8-8100-145cff697b74&ot=e1221cd5-b3a2-4895-b641-fd6e04148704"
+                    target="_blank">Events</a></li>
+            <li><a href="#shop">Shop</a></li>
+        </ul>
+        <div class="cart-icon">Cart (0)</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="hero-video" id="heroVideo" poster="poster.jpg">
+            <!-- Placeholder if file is missing, ideally this is 'hero.mp4' -->
+            <source src="hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-content">
+            <h1 class="fade-in-up">Deeply<br>Grounded</h1>
+            <p class="fade-in-up delay-1">Artisan Coffee for the Intentional Soul</p>
+
+            <div class="macaw-btn-wrapper fade-in-up delay-2">
+                <a href="https://order.toasttab.com/online/macaw-coffee" class="rainbow-btn" target="_blank">
+                    Experience the Menu
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Brand Story Section -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subheading">Our Philosophy</span>
+                <h2>Quietly Soulful</h2>
+            </div>
+            <div class="story-content">
+                <p>We believe in the ritual of the pour. In the slow awakening of the morning. Macaw Coffee Co. is born
+                    from a desire to reconnect with the earth and the craft. Every bean is sourced with intention,
+                    roasted with patience, and brewed for those who seek a moment of calm in the chaos.</p>
+                <p>Rustic, modern, and unapologetically artisan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subheading">Visual Diary</span>
+                <h2>The Space & Craft</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Visible Items (Originals + Favorites) -->
+                <div class="gallery-item item-1" style="background-image: url('images/macaw2.jpg');"></div>
+                <!-- Counter/Interior -->
+                <div class="gallery-item item-2" style="background-image: url('images/yelp4.jpg');"></div>
+                <!-- Pastry/Cinnamon Roll (Cupcake-like) -->
+                <div class="gallery-item item-3" style="background-image: url('images/macaw3.jpg');"></div>
+                <!-- Corner Seating (Tall) -->
+                <div class="gallery-item item-4" style="background-image: url('images/yelp1.jpg');"></div>
+                <!-- Bread Shelves -->
+
+                <!-- Hidden Items -->
+                <div class="gallery-item item-5 gallery-hidden" style="background-image: url('images/macaw1.jpg');">
+                </div> <!-- Window View (Old Main) -->
+                <div class="gallery-item item-6 gallery-hidden" style="background-image: url('images/macaw4.jpg');">
+                </div>
+                <div class="gallery-item item-7 gallery-hidden" style="background-image: url('images/macaw5.jpg');">
+                </div>
+                <div class="gallery-item item-8 gallery-hidden" style="background-image: url('images/yelp2.jpg');">
+                </div>
+                <div class="gallery-item item-9 gallery-hidden" style="background-image: url('images/yelp3.jpg');">
+                </div>
+                <div class="gallery-item item-10 gallery-hidden" style="background-image: url('images/yelp5.jpg');">
+                </div>
+                <div class="gallery-item item-11 gallery-hidden" style="background-image: url('images/yelp6.jpg');">
+                </div>
+                <div class="gallery-item item-12 gallery-hidden" style="background-image: url('images/yelp7.jpg');">
+                </div>
+                <div class="gallery-item item-13 gallery-hidden" style="background-image: url('images/yelp8.jpg');">
+                </div>
+                <div class="gallery-item item-14 gallery-hidden" style="background-image: url('images/yelp9.jpg');">
+                </div>
+            </div>
+
+            <div class="gallery-expand">
+                <button id="expandGalleryBtn" class="arrow-btn" aria-label="Expand Gallery">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Blends Section -->
+    <section id="blends" class="section blends-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subheading">The Collection</span>
+                <h2>Signature Blends</h2>
+            </div>
+
+            <div class="grid product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/Columbia1.jpeg" alt="Colombia Roast" class="product-image">
+                    <div class="product-info">
+                        <h3>Colombia</h3>
+                        <p>Single Origin • Rich & Smooth</p>
+                        <span class="price">$22.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/Guatemala2.jpg" alt="Guatemala Roast" class="product-image">
+                    <div class="product-info">
+                        <h3>Guatemala</h3>
+                        <p>Single Origin • Chocolate & Floral</p>
+                        <span class="price">$22.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/DecafNightcap3.jpeg" alt="Decaf Nightcap Blend" class="product-image">
+                    <div class="product-info">
+                        <h3>Decaf Nightcap</h3>
+                        <p>Signature Blend • Calm & Cozy</p>
+                        <span class="price">$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subheading">Community Love</span>
+                <h2>Testimonials</h2>
+            </div>
+
+            <div class="grid testimonial-grid">
+                <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"One of the most beautiful coffee shops I've been to. The aesthetic reminds
+                        me of Miami or Palm Springs. They have a great selection of pastries."</p>
+                    <span class="review-author">— Local Guide</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Their coffee is fantastic and food options are also high quality. Breakfast
+                        burrito is great and also huge. Nice ambience and very friendly staff."</p>
+                    <span class="review-author">— Happy Customer</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Very friendly staff and very positive vibe. Excellent food with lots of
+                        great options for breakfast and lunch. If you're in the area, I'd recommend stopping by."</p>
+                    <span class="review-author">— Visitor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h4>MACAW</h4>
+                <p>Crafted for the slow living.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Shipping</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Macaw Coffee Co.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
