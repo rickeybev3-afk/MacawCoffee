@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Macaw Coffee Co. site loaded successfully.');
 
+    // Prevent browser from restoring scroll position on reload
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
